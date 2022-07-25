@@ -1,0 +1,39 @@
+.main {
+  display: flex;
+}
+.sidebar {
+  width: 25%;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  position: relative;
+  box-sizing: border-box;
+  top:0;
+  left: 0;
+  border-right: 1px solid #ecf1fd;
+}
+.chatlist {
+  overflow-y: auto;
+}
+.mainchat {
+  position: relative;
+  right: 0;
+  top:0;
+  display: inline-block;
+  width: 75%;
+  box-sizing: border-box;
+  background-color: #FAFAFA;
+  height: 100vh;
+}
+.search {
+  width: 100%;
+}
+
+@media screen and (max-width : 700px) {
+  .sidebar {
+    width: 50%;
+  }
+  .mainchat {
+    width: 60%;
+  }  
+}

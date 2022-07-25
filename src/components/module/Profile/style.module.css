@@ -1,0 +1,25 @@
+.profile {
+  width: 100%;
+  height: 300px;
+  padding : 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: slidedown 200ms ease-in forwards;
+  transform-origin: top center;
+}
+.profile img {
+  width: 50%;
+}
+
+@keyframes slidedown {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100%{
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}

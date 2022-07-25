@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  flex-direction: row;
+  padding : 15px;
+  padding-right: 25px;
+  align-items: center ;
+  cursor: pointer;
+}
+.card:hover {
+  background-color: #ecf1fd;
+}
+.card img {
+  width: 50px;
+  height: 50px;
+}
+.middle {
+  margin-left: 10px;
+}
+.name h6 {
+  margin: 0;
+}
+.message {
+  font-size: 12px;
+}
+.message p {
+  margin: 0;
+  text-overflow: ellipsis;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.last {
+  margin-left: auto;
+}
+.lastime {
+  font-size: 12px;
+}
+.notification {
+  width: 15px;
+  height: 15px;
+  font-size: 12px;
+  border-radius: 50%;
+  background-color: #7E98DF;
+  margin-left: auto;
+  display: flex;
+  padding: 0;
+}
+.notification span {
+  margin : auto;
+  font-size: 10px;
+  color: white;
+}

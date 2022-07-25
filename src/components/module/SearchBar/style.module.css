@@ -1,0 +1,32 @@
+.search {
+  width: 100%;
+  position: relative;
+  padding: 15px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.search input  {
+  background-color: #FAFAFA;
+  border: none;
+  width: 80%;
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 50px;
+  font-size: 12px;
+}
+.search input:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: 0 0 6px #c5c3c3;
+}
+.plus {
+  width: 20px;
+  margin-left: auto;
+}
+.searchicon {
+  width: 20px;
+  position: absolute;
+  left: 30px;
+}

@@ -1,0 +1,53 @@
+.title {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 40px 30px 0 15px
+}
+.title h4 {
+  color: #7E98DF;
+}
+.title img {
+  margin-left: auto;
+  cursor: pointer;
+}
+.menulist {
+  padding : 35px;
+  border-radius: 10px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  position: absolute;
+  background-color: #7E98DF;
+  z-index: 3;
+  color: white;
+  top: 45px;
+  right: 60px;
+  animation: come 400ms ease-in-out forwards;
+  transform-origin: top center;
+}
+.menulist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menulist ul li {
+  margin : 10px auto;
+  cursor: pointer;
+}
+.menulist ul li img{
+  width: 20px;
+  
+}
+
+@keyframes come {
+  0% {
+    transform: scaleY(0);
+  }
+  80% {
+    transform: scaleY(1.1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}

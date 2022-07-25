@@ -1,0 +1,133 @@
+.chatspace {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+.headchat {
+  height: 80px;
+  width: 100%;
+  padding: 10px 50px;
+  background-color: white;
+  position: absolute;
+  top:0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.headchat img[id="photo"] {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.headchat h5 {
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+.headchat span {
+  color: #7E98DF;
+  font-size: 14px;
+}
+.headchat img[id="menu"] {
+  margin-left: auto;
+}
+.bodychat {
+  width: 100%;
+  position: relative;
+  top: 80px;
+  height: calc(100vh - 160px);
+  padding: 20px 50px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.bodychat > div {
+  max-width: 60%;
+  width: auto;
+  padding: 10px 30px;
+  background-color: #7E98DF;
+  color: white;
+  margin: 5px;
+  border-radius: 4px;
+}
+.left {
+  margin-right: auto !important;
+  border-top-right-radius: 25px !important;
+  border-bottom-left-radius: 25px !important;
+}
+.right {
+  margin-left: auto !important;
+  border-top-left-radius: 25px !important;
+  border-bottom-right-radius: 25px !important;
+  background-color: white !important;
+  color: gray !important;
+
+}
+.chatinput {
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 10px 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.chatinput input {
+  width: 100%;
+  height: 50px;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 10px;
+  background-color: #FAFAFA;
+}
+
+.chatinput input:focus-visible {
+  outline: none;
+  border: 1px solid #7E98DF;
+}
+.chatinput button {
+  width: 80px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7E98DF;
+  color: white;
+  position: absolute;
+  right: 55px;
+}
+.chatinput button:focus {
+  outline: none;
+  background-color: #6582d1;
+}
+.profile {
+  position: absolute;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  border-top-left-radius: 10px;
+  box-shadow: 2px -3px 7px 2px #c8cacf;
+  width: 30%;
+  border-bottom-left-radius: 10px;
+  transition: visibility 200ms ease-in-out;
+  visibility: hidden;
+}
+
+@keyframes slideleft {
+  0%{
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width : 700px) {
+  .headchat h5 {
+    font-size: 14px;
+  }
+}

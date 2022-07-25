@@ -1,0 +1,11 @@
+.form {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 40px;
+  border: none;
+  border-bottom: 2px solid grey;
+}
+.form:focus-visible {
+  outline: none;
+}

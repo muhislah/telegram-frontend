@@ -1,0 +1,16 @@
+.button {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  background-color: #7E98DF;
+  color: white;
+}
+.buttonwhite {
+  width: 100%;
+  height: 50px;
+  border-radius: 25px;
+  border: 1px solid #7E98DF;
+  background-color: white;
+  color: #7E98DF
+}
