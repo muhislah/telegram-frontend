@@ -15,8 +15,9 @@ function App() {
         <Routes>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/profile' element={<Profile />} />
-          <Route path='/' element={<WithAuth> <Home /> </WithAuth> } />
+          <Route path='/' element={<WithAuth> <Home /> </WithAuth> } >
+            <Route path="profile" element={<Profile />} />
+          </Route>
           <Route path="*" element={
             <div>Page not Found</div>
           } />

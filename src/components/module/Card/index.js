@@ -1,26 +1,32 @@
 import React from 'react'
 import style from './style.module.css'
-import calvin from './calvin.png'
+import calvin from './calvin.jpg'
+import { useRef } from 'react'
 
 const Card = ({onClick , ...props}) => {
+  const thisRef = useRef(null)
   return (
-    <div className={style.card} onClick={onClick}>
-      <img src={calvin} alt=""/>
+    <div className={style.card} onClick={onClick} style={{
+      background : props.selected ? '#ecf1fd' : '#fff'
+    }}>
+      <img src={props?.photo || calvin} alt="" style={{
+        borderRadius : '10px'
+      }}/>
       <div className={style.middle}>
         <div className={style.name}>
           <h6>{props.name}</h6>
         </div>
         <div className={style.message}>
-          <p>Hi, bro! Come to my house!</p>
+          <p>{props.lastMessage.slice(0,25)}</p>
         </div>
       </div>
       <div className={style.last}>
         <div className={style.lastime}>
-          <span>15:13</span>
+          <span>{props.lastTime}</span>
         </div>
-        <div className={style.notification}>
+        {/* <div className={style.notification}>
           <span>2</span>
-        </div>
+        </div> */}
       </div>
     </div>
   )

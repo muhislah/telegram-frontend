@@ -64,7 +64,54 @@
   border-bottom-right-radius: 25px !important;
   background-color: white !important;
   color: gray !important;
-
+  position: relative;
+}
+.right::after {
+  content: '';
+  position: absolute;
+  border-bottom: 2px solid #6582d1;
+  border-right: 2px solid #6582d1; 
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  top: 15px;
+  right: 30px;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  background-color: white;
+}
+.right:hover::after {
+  opacity: 1;
+  box-shadow: 1px 1px 6px 8px #fff;
+  cursor: pointer;
+}
+.right:hover > div.dropicon{
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  z-index :2
+}
+.dropdownmenu {
+  position: absolute;
+  top: 30px;
+  right: 36px;
+  width: 100px;
+  padding: 6px;
+  background-color: #fff;
+  box-shadow: 0px 0px 3px 0px #c3c4c5;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 12px;
+  z-index: 4;
+}
+.dropdownmenu p {
+  margin: 3px auto;
+  cursor: pointer;
+}
+.dropdownmenu hr {
+  margin: 0
 }
 .chatinput {
   width: 100%;
@@ -105,6 +152,7 @@
   background-color: #6582d1;
 }
 .profile {
+  z-index: 99;
   position: absolute;
   right: 0;
   background-color: white;
@@ -113,8 +161,34 @@
   box-shadow: 2px -3px 7px 2px #c8cacf;
   width: 30%;
   border-bottom-left-radius: 10px;
-  transition: visibility 200ms ease-in-out;
-  visibility: hidden;
+  animation: slideleft 200ms ease-in-out forwards;
+}
+.slideright {
+  z-index: 99;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  height: 100vh;
+  border-top-left-radius: 10px;
+  box-shadow: 2px -3px 7px 2px #c8cacf;
+  width: 30%;
+  border-bottom-left-radius: 10px;
+  animation: slidereverse 200ms ease-in-out forwards;
+}
+.profilesidebar {
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.profilesidebar img {
+  margin-bottom: 20px;
+  width: 80%;
 }
 
 @keyframes slideleft {
@@ -123,6 +197,16 @@
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@keyframes slidereverse {
+  0%{
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(200%);
+    visibility: hidden;
   }
 }
 
