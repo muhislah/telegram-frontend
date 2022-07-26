@@ -54,6 +54,7 @@ const Home = () => {
         socket.emit('present', me.id)
       }
       socket.on('online', data => {
+        console.log('reaching user online')
         dispatch({type : 'UPDATE_ONLINE', payload : data})
       })
     }
@@ -76,7 +77,7 @@ const Home = () => {
       <section className={style.sidebar}>
         <Title callback={handleProfile} />
         {showProfile ?
-          <Profile data={me} setEditModal={setModalEdit} /> : ""}
+          <Profile socket={socket} data={me} setEditModal={setModalEdit} /> : ""}
         <SearchBar handleSearch={(data) => handleSearch(data)} />
         <div className={style.chatlist}>
           {

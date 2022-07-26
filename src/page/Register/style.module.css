@@ -33,6 +33,31 @@
   color: #7E98DF;
   cursor: pointer;
 }
+.formbox input:invalid {
+  border-bottom: 2px solid rgb(189, 5, 5);
+  transition: all 200ms ease-in-out;
+}
+.formbox input:invalid + span.email::before{
+  display: block;
+  content: 'Please enter correct email';
+  color : rgb(189, 5, 5);
+  font-size: 10px;
+}
+.formbox input:invalid + span.name::before{
+  display: block;
+  content: 'Only A-Z or a-z character allowed';
+  color : rgb(189, 5, 5);
+  font-size: 10px;
+}
+.formbox input:invalid + span.password::before{
+  display: block;
+  content: 'Password between 6 - 32 character';
+  color : rgb(189, 5, 5);
+  font-size: 10px;
+}
+.formbox button:disabled {
+  background-color: #9eb0e0;
+}
 .arrow {
   float: left;
   border-top: 2px solid #7E98DF;

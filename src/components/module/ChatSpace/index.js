@@ -3,12 +3,13 @@ import style from './style.module.css'
 import profilemenu from './profilemenu.svg'
 import calvin from './calvin.jpg'
 import axios from 'axios'
-import { Link } from "react-router-dom";
 import { useRef } from 'react'
 import { userAction } from '../../../configs/redux/actions/userAction'
 import { useDispatch, useSelector } from 'react-redux'
+import { v4 as uuid } from 'uuid';
 
 const ChatSpace = ({ receiver_id, socket }) => {
+  const bottomRef = useRef(null);
   const dispatch = useDispatch()
   const { userOnline : { onlineUser } } = useSelector(state => state)
   const token = localStorage.getItem('token')
@@ -105,6 +106,10 @@ const ChatSpace = ({ receiver_id, socket }) => {
     dispatch(userAction(token))
   }, [messages])
 
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({behavior: 'smooth'});
+  }, [messages]);
+
   const addMessage = async (message, id) => {
     if(id){
       messages.map((data) => {
@@ -169,12 +174,12 @@ const ChatSpace = ({ receiver_id, socket }) => {
         console.log('new Message coming')
         console.log(message)
         if ((message.sender_id === me.id && message.receiver_id === receiver_id) || (message.sender_id === receiver_id && message.receiver_id === me.id)) {
-          let id = ''
-          if (message.sender_id === me.id) {
-            id = await addMessage(message)
-          }
+          const id = uuid()
           message.id = id
           setMessages((current) => [...current, message])
+          if (message.sender_id === me.id) {
+            await addMessage(message)
+          }
         }
         setMessage('')
       })
@@ -228,7 +233,9 @@ const ChatSpace = ({ receiver_id, socket }) => {
                 </div>
               }) : ''
             }
-
+            <div ref={bottomRef} style={{
+              visibility : 'hidden'
+            }}/>
           </div>
           <div className={style.chatinput}>
             <input type="text" placeholder='Type your message...' ref={input} value={message} onChange={(e) => setMessage(e.target.value)} />

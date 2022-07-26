@@ -8,9 +8,19 @@
   justify-content: center;
   animation: slidedown 200ms ease-in forwards;
   transform-origin: top center;
+  position: relative;
 }
 .profile img {
   width: 50%;
+}
+.profile img.logout {
+  width: 25px;
+  height: 22px;
+  position: absolute;
+  filter: invert(79%) sepia(28%) saturate(7187%) hue-rotate(194deg) brightness(97%) contrast(80%);
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
 }
 
 @keyframes slidedown {
