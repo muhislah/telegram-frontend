@@ -93,7 +93,7 @@ Contributions are what make the open source community such an amazing place to b
 
 | Profile | Receiver Profile |
 | ------------- | ------------- |
-| ![profile](/images/profile.png?raw=true " ") | ![receiver](/images/profile.png?raw=true " ") |
+| ![profile](/images/profile.png?raw=true " ") | ![receiver](/images/profile2.png?raw=true " ") |
 
 
 <!-- RELATED PROJECT -->
