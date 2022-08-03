@@ -89,11 +89,11 @@ Contributions are what make the open source community such an amazing place to b
 
 | Main Chat | Edit Profile |
 | ------------- | ------------- |
-| ![chat](/images/mainchat2.png?raw=true " ") | ![edit](/images/editprofile.png?raw=true " ") |
+| ![chat](/images/mainchatx.png?raw=true " ") | ![edit](/images/editprofilex.png?raw=true " ") |
 
 | Profile | Receiver Profile |
 | ------------- | ------------- |
-| ![profile](/images/profile.png?raw=true " ") | ![receiver](/images/profile3.png?raw=true " ") |
+| ![profile](/images/profilex.png?raw=true " ") | ![receiver](/images/profile2x.png?raw=true " ") |
 
 
 <!-- RELATED PROJECT -->
